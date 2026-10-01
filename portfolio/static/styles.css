@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --colorVerde: #00ff00;
+  --colorFondo: #000000;
+  --colorSideBar1 : #4fff51;
+  --colorSideBar2 :  #99ff99c6;
+  --colorSideBarHover:  #52864d;
+  --colorH1 : #98ff8f;
+  --colorP :  #b4faad;
+  --colorH2 : #91ff87;
+  --colorH3 : #98ff8f;
+  --colorBorde : #60785e;
+  --colorShadowH1 : #98ff8f;
+  --colorShadowH2 : #15ff00;
+  --colorShadowH3 : #98ff8f;
+  --colorShadowP : #8eff83;
+  --colorFondoPC : rgba(20, 20, 20, 0.8);
+  --colorBordeYShadowPC : #98ff8f;
+  --colorBordeHoverPC : #b4faad;
+  --colorFondoLinka : #4fff51;
+  --colorFondoLinkb : #98ff8f;
+  --colorHoverLinka : #98ff8f;
+  --colorHoverLinkb : #b4faad;
+  --colorLogo : #98ff8f;
+  --colorLogoShadowa : #d8ffd5;
+  --colorLogoShadowb : #c6ffc1;
+
+    --colorRojoTC: #ff0000;
+    --colorFondoTC: #eeeeee;
+    --colorSideBar1TC: #ff5151;
+    --colorSideBar2TC: #ff9999c6;
+    --colorSideBarHoverTC: #864d4d;
+    --colorH1TC: #ff8f98;
+    --colorPTC: #faadb4;
+    --colorH2TC: #ff8791;
+    --colorH3TC: #ff8f98;
+    --colorBordeTC: #785e60;
+    --colorShadowH1TC: #ff8f98;
+    --colorShadowH2TC: #ff0015;
+    --colorShadowH3TC: #ff8f98;
+    --colorShadowPTC: #ff838e;
+    --colorFondoPCTC: rgba(20, 20, 20, 0.8);
+    --colorBordeYShadowPCTC: #ff8f98;
+    --colorBordeHoverPCTC: #faadb4;
+    --colorFondoLinkaTC: #ff5151;
+    --colorFondoLinkbTC: #ff8f98;
+    --colorHoverLinkaTC: #ff8f98;
+    --colorHoverLinkbTC: #faadb4;
+    --colorLogoTC: #ff8f98;
+    --colorLogoShadowaTC: #ffd5d8;
+    --colorLogoShadowbTC: #ffc1c6;
+}
+
+body{
+    background-color: var(--colorFondo);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: "Roboto Condensed";
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    transition: background-color 0.3s ease;
+}
+.page-layout {
+    min-height: 100vh;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+    background-attachment: fixed;
+}
+.top-navbar {
+    position: sticky;
+    top: 0;
+    min-height: 4.5rem;
+    padding: 0.75rem 1.5rem;
+    background: rgba(0, 0, 0, 0.9);
+    border-bottom: 2px solid var(--colorVerde);
+    box-shadow: 0 0 15px var(--colorVerde);
+    z-index: 10;
+}
+.top-navbar .container-fluid {
+    position: relative;
+    min-height: 3rem;
+}
+.top-navbar .logo-brand {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    margin: 0;
+}
+.top-navbar .navbar-collapse {
+    justify-content: center;
+}
+.top-navbar .navbar-nav {
+    gap: 1.25rem;
+    align-items: center;
+}
+.top-navbar .nav-link {
+    color: var(--colorH1);
+    font-size: 1.15rem;
+    font-weight: bold;
+    text-shadow: 0 0 6px var(--colorShadowH1);
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+.top-navbar .nav-link:hover,
+.top-navbar .nav-link.active {
+    color: var(--colorVerde);
+    text-shadow: 0 0 10px var(--colorVerde);
+}
+.top-navbar .navbar-toggler {
+    border-color: var(--colorVerde);
+}
+.top-navbar .navbar-toggler-icon {
+    filter: hue-rotate(80deg) brightness(1.5);
+}
+@media (max-width: 991px) {
+    .top-navbar .container-fluid {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .top-navbar .navbar-toggler {
+        order: 2;
+        margin-left: auto;
+    }
+    .top-navbar .logo-brand {
+        position: static;
+        order: 1;
+        transform: none;
+        margin: 0;
+    }
+    .top-navbar .navbar-collapse {
+        order: 3;
+        flex-basis: 100%;
+    }
+}
+.bordes-verdes{
+    background-image: 
+        linear-gradient(90deg, var(--colorVerde), transparent 20%, transparent 80%, var(--colorVerde)),
+        linear-gradient(90deg, var(--colorVerde), transparent 20%, transparent 80%, var(--colorVerde)),
+        linear-gradient(0deg, var(--colorVerde), transparent 20%, transparent 80%, var(--colorVerde)),
+        linear-gradient(0deg, var(--colorVerde), transparent 20%, transparent 80%, var(--colorVerde));
+    background-size: 100% 8px, 100% 8px, 8px 100%, 8px 100%;
+    background-position: 0 0, 0 100%, 0 0, 100% 0;
+    background-repeat: no-repeat;
+}
+.sidebar {
+    position: fixed;
+    top:75%;
+    left:1.5rem;
+    transform: translateY(-50%);
+    width: 90px;
+    height: auto;
+    background: linear-gradient(to bottom, var(--colorSideBar1), var(--colorSideBar2));
+    border-radius: 4rem;
+    max-height: 85vh;
+    z-index: 5;
+}
+@media (max-width: 768px) {
+    .sidebar {
+        width: 75px;
+        left: 1rem;
+        top: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 60px;
+        left: 0.5rem;
+        height: auto;
+    }
+}
+.sidebar-content {
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+.sidebar .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+.sidebar .nav-item {
+    width: 100%;
+    text-align: center;
+}
+.sidebar .nav-item a {
+    display: block;
+    width: 100%;
+    border-radius: 4rem;
+    overflow:hidden;
+    transition: background-color 0.2s ease;
+}
+.sidebar .nav-item a img{
+    width: 100%;
+    height: auto;
+}
+.sidebar .nav-item a i {
+    color: #000000;
+    font-size: 2.5rem;
+}
+.sidebar .nav-item a:hover {
+    background-color: var(--colorSideBarHover);
+}
+.main-content {
+    margin-left: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+h1{
+    color: var(--colorH1);
+    -webkit-text-stroke: 0.025rem var(--colorBorde);
+    text-align: center;
+    margin: 0;
+    text-shadow: 0 0 5px var(--colorShadowH1), 0 0 10px var(--colorShadowH1), 0 0 15px var(--colorShadowH1), 0 0 20px var(--colorShadowH1), 0 0 25px var(--colorShadowH1);
+    font-size: 5rem;
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+.content-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+}
+.content-section h2 {
+    color: var(--colorH2);
+    -webkit-text-stroke: 0.02rem var(--colorBorde);
+    text-shadow: 0 0 5px var(--colorShadowH2);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: floating 3s ease-in-out infinite;
+}
+.content-section p {
+    color: var(--colorP);
+    -webkit-text-stroke: 0.02rem var(--colorBorde);
+    text-shadow: 0 0 5px var(--colorShadowP);
+    max-width: 600px;
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    padding: 2rem;
+}
+.project-card {
+    background: var(--colorFondoPC);
+    border: 2px solid var(--colorBordeYShadowPC);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 0 15px var(--colorBordeYShadowPC);
+    position: relative;
+    z-index: 1;
+}
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px var(--colorBordeYShadowPC), 0 0 50px var(--colorBordeYShadowPC);
+    border-color: var(--colorBordeHoverPC);
+    z-index: 100;
+}
+.project-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+.project-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.project-info h3 {
+    color: var(--colorH3);
+    -webkit-text-stroke: 0.015rem var(--colorBorde);
+    text-shadow: 0 0 5px var(--colorShadowH3);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.project-info p {
+    color: var(--colorP);
+    font-size: 0.95rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.project-link {
+    display: inline-block;
+    background: linear-gradient(45deg, var(--colorFondoLinka), var(--colorFondoLinkb));
+    color: #000000;
+    padding: 0.7rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+.project-link:hover {
+    background: linear-gradient(45deg, var(--colorHoverLinka), var(--colorHoverLinkb));
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--colorHoverLinka);
+}
+@media (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+
+    .project-card img {
+        height: 200px;
+    }
+}
+.logo-brand {
+    font-family: "black ops one", sans-serif;
+    position: static;
+    display: block;
+    margin-right: 2rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--colorLogo);
+    -webkit-text-stroke: 0.02rem var(--colorBorde);
+    text-shadow: 0 0 10px var(--colorLogoShadowa), 0 0 20px var(--colorLogoShadowb);
+    cursor: pointer;
+    text-decoration: none;
+}
+.content-section {
+    scroll-margin-top: 5rem;
+}
+.light-mode{
+    background-color: var(--colorFondoTC);
+    --colorVerde: var(--colorRojoTC);
+    --colorFondo: var(--colorFondoTC);
+    --colorSideBar1: var(--colorSideBar1TC);
+    --colorSideBar2: var(--colorSideBar2TC);
+    --colorSideBarHover: var(--colorSideBarHoverTC);
+    --colorH1: var(--colorH1TC);
+    --colorP: var(--colorPTC);
+    --colorH2: var(--colorH2TC);
+    --colorH3: var(--colorH3TC);
+    --colorBorde: var(--colorBordeTC);
+    --colorShadowH1: var(--colorShadowH1TC);
+    --colorShadowH2: var(--colorShadowH2TC);
+    --colorShadowH3: var(--colorShadowH3TC);
+    --colorShadowP: var(--colorShadowPTC);
+    --colorFondoPC: var(--colorFondoPCTC);
+    --colorBordeYShadowPC: var(--colorBordeYShadowPCTC);
+    --colorBordeHoverPC: var(--colorBordeHoverPCTC);
+    --colorFondoLinka: var(--colorFondoLinkaTC);
+    --colorFondoLinkb: var(--colorFondoLinkbTC);
+    --colorHoverLinka: var(--colorHoverLinkaTC);
+    --colorHoverLinkb: var(--colorHoverLinkbTC);
+    --colorLogo: var(--colorLogoTC);
+    --colorLogoShadowa: var(--colorLogoShadowaTC);
+    --colorLogoShadowb: var(--colorLogoShadowbTC);
+}

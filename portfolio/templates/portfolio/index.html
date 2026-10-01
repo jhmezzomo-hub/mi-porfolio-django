@@ -1,0 +1,141 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="JHMezzomo">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>Portfolio|JHM</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'static/imagenes/favicon_portfolio.ico' %}">
+</head>
+<body>  
+    <nav class="navbar navbar-expand-lg top-navbar">
+        <div class="container-fluid">
+            <div class="logo-brand" onclick="ChangeMode()">JHM</div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" aria-current="page" href="#sobre-mi">Sobre Mi</a>
+                    <a class="nav-link" href="#habilidades">Habilidades</a>
+                    <a class="nav-link" href="#proyectos">Proyectos</a>
+                    <a class="nav-link" href="#cv">Mi CV</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid page-layout bordes-verdes">
+        <nav class="navbar navbar-dark sidebar">
+            <div class="container sidebar-content">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="navbar-brand" href="https://www.instagram.com/jhmezzo/" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-brand" href="https://github.com/jhmezzomo-hub">
+                        <i class="fa-brands fa-github"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-brand" href="https://www.youtube.com/@joaquinmezzomo4281">
+                        <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                    </li>
+                </ul> 
+            </div>
+        </nav>
+        <main class="main-content">
+            <h1>
+                Bienvenido,<br>conoce más de mi.
+            </h1>
+        </main>
+        <section class="content-section" id="sobre-mi">
+            <h2><u>Sobre mi</u></h2>
+            <p>            
+                Soy Joaquín Mezzomo. Actualmente soy estudiante del Instituto Huergo, donde estoy cursando la carrera de Técnico en Computación.
+                <br>A futuro, me gustaría dedicarme al desarrollo web y a la creación de software. Me considero una persona diligente, responsable y con capacidad para trabajar en equipo.
+                <br>Además de la programación, me gusta escribir. He participado en las cuatro instancias del concurso literario del instituto.
+                <br>También practico Taekwondo y actualmente soy cinturón verde.
+                <br>A su vez, estoy cursando el programa de Diploma Dual, proporcionado por Academica International Studies. Actualmente me encuentro en el primer año, cursando las materias de Inglés II y Criminología.
+            </p>
+        </section>
+        <section class="content-section" id="habilidades">
+            <h2><u>Habilidades</u></h2>
+            <p>
+                Actualmente, poseo conocimientos en Python, HTML, CSS y SQL, además de un manejo básico de Photoshop.
+                <br>Tengo experiencia utilizando GitHub y Git Bash, así como herramientas de Inteligencia Artificial como apoyo para el análisis, la resolución de problemas y el desarrollo de ideas.
+                <br>Poseo habilidades de comunicación y trabajo en equipo, y actualmente llevo adelante un emprendimiento junto a un compañero de mi institución educativa.
+                <br>Cuento con un nivel fluido de inglés, con capacidad para la lectura, escritura y comunicación oral.
+            </p>
+        </section>
+        <section class="content-section" id="proyectos">
+            <h2><u>Mis proyectos</u></h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <img src="{% static 'imagenes/escapeDelJuicio.png' %}" alt="Escape del Juicio">
+                    <div class="project-info">
+                        <h3>Escape del Juicio</h3>
+                        <p>Un juego basado en los juegos FanMade de Saw.</p>
+                        <a href="https://github.com/jhmezzomo-hub/EscapeDelJuicio.git" class="project-link" target="_blank">
+                            Ver en GitHub →
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="{% static 'imagenes/SpotiMezzo.png' %}" alt="SpotiMezzo">
+                    <div class="project-info">
+                        <h3>SpotiMezzo</h3>
+                        <p>Proyecto del instituto, reproductor de música. Funciona de manera local con VLC</p>
+                        <a href="https://github.com/jhmezzomo-hub/ReproductorDeMusica.git" class="project-link" target="_blank">
+                            Ver en GitHub →
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="{% static 'imagenes/PokemonM.png' %}" alt="PokemonM">
+                    <div class="project-info">
+                        <h3>Pokemon M</h3>
+                        <p>Proyecto del instituto, replica de un juego pokemon.</p>
+                        <a href="https://github.com/jhmezzomo-hub/PokemonM.git" class="project-link" target="_blank">
+                            Ver en GitHub →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content-section" id="cv">
+            <h2><u>Mi currículum</u></h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <img src="{% static 'imagenes/descragar_CV_Img.png' %}" alt="Descargar CV">
+                    <div class="project-info">
+                        <h3>Mi CV</h3>
+                        <p>Gracias por revisar mi portfolio, estare atento a cualquier comentario u oportunidad.</p>
+                        <a href="{% static 'Info/CV_Joaquin_Mezzom.pdf' %}" class="project-link" download="CV_Joaquin_Mezzom.pdf">
+                            Descargar CV ↓
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <footer>
+        <div class="footer-content">
+            <p style="color: #ffffff; text-align: center;">&copy; 2026 JHMezzomo. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script>
+        function ChangeMode() {
+            document.body.classList.toggle("light-mode");
+            }
+    </script>
+   
+</body>
+</html>
