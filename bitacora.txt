@@ -1,0 +1,30 @@
+**BITACORA PERSONAL DE JOAQUIN HUGO MEZZOMO**
+
+**Primera entrada:**
+    Inicie el proceso de creacion del Blog, tarea impuesta por el profesor Ignacio Garcia. Para ello
+    cree una carpeta en la cual inicie un entorno virtual, debido a que DJango puede causar conflictos de versiones
+    con otras librerias, por lo que es requerido un entorno virtual para instalarlo. Una vez inciado el proyecto
+    use el comando para creaqr mi primera app, mi portfolio, hice las vinculaciones y acciones correspondientes 
+    para que funcione, creando urls.py y el urlpatterns. Una vez creado abri el codigo de mi portfolio y copie 
+    los archivos, puse el index.html en la carpeta templates/portfolio y las imagenes y el styles.css en la 
+    carpeta statics. Aqui ocurrio un error, al ser mi primera vez importando desde un archivo estatico
+    olvide poner el *{% load statics %}* por lo que al correr el sevidor salto un error. Aunque no fue el unico, 
+    ya que al querer poner el link en el buscador me tiraba un error de direccionamiento, por lo que al revisar los
+    archivos urls.py me di cuenta de que me habia olvidado el *portfolio/index.html*, por lo que al buscar el 
+    archivo nunca lo encontraba. 
+
+**Segunda entrada:*
+    Una vez comprobe que el portfolio estaba bien vinculado procedi a leer el documento con los requerimientos 
+    de entrega del blog, alli encontre uno de los tutoriales, especificamente el de RealPython. Entre al enlace
+    y procedi a seguirlo. Alli me encontre un error, por leer mal, agregue un fragmento de codigo en una vista
+    que no era, por lo que me salto un error. Despues de darme cuenta de mi error lo corregi y termine el tutorial.
+    Una vez terminado lo probe, sin ningun tipo de diseño, pero para probar que funcionara.
+
+**Tercera entrada:**
+    Continue con el diseño del blog, use los diseños que ya tenia de mi portfolio y copie las clases y el diseño a 
+    el css del blog. Tuve un pequeño incoveniente que me olvide de importar las fuentes desde google, pero copie 
+    el codigo y se arreglo, una vez terminado el diseño lo probe y como habia usado un codgigo que ya funcionaba 
+    no habia ningun problema. Hice un par de posts y los probe. Luego investigue como hacer el boton para eliminar
+    el comentario y agregue las lineas de codifo pertinentes tanto en urls, como en views y en el html. Me faltaba
+    poder agregar imagenes por lo que cree la columna en la base de datos y agregue que compruebe si existe al cargar
+    los posts, en caso de que no, pone una imagen predeterminada.
