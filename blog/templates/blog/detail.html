@@ -53,6 +53,15 @@
                         <span>• {{ comment.created_on.date }}</span>
                     </p>
                     <p>{{ comment.body|linebreaks }}</p>
+
+                    {% if user.is_superuser %}
+                        <form method="post" action="{% url 'delete_comment' comment.pk %}" class="delete-comment-form">
+                            {% csrf_token %}
+                            <button type="submit" class="delete-comment-btn" onclick="return confirm('¿Seguro que querés eliminar este comentario?')">
+                                Eliminar comentario
+                            </button>
+                        </form>
+                    {% endif %}
                 </div>
             {% empty %}
                 <p class="empty-state">Todavía no hay comentarios. ¡Sé el primero!</p>

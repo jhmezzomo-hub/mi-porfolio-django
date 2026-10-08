@@ -1,4 +1,4 @@
-from django.shortcuts import redirect, render
+from django.shortcuts import get_object_or_404, redirect, render
 from blog.forms import CommentForm
 from blog.models import Post, Comment
 
@@ -44,3 +44,13 @@ def blog_detail(request, pk):
     }
 
     return render(request, "blog/detail.html", context)
+
+
+def delete_comment(request, comment_id):
+    if not request.user.is_authenticated or not request.user.is_superuser:
+        return redirect("blog_index")
+
+    comment = get_object_or_404(Comment, pk=comment_id)
+    post_pk = comment.post.pk
+    comment.delete()
+    return redirect("blog_detail", pk=post_pk)

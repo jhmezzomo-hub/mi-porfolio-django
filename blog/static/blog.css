@@ -325,6 +325,26 @@ body {
     margin-bottom: 0.5rem;
 }
 
+.delete-comment-form {
+    margin-top: 0.75rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.delete-comment-btn {
+    background: #b71c1c;
+    color: #fff;
+    border: none;
+    border-radius: 0.7rem;
+    padding: 0.55rem 0.9rem;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.delete-comment-btn:hover {
+    background: #d32f2f;
+}
+
 .empty-state {
     color: var(--colorP);
     text-align: center;
