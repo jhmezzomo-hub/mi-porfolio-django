@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
   --colorVerde: #00ff00;
   --colorFondo: #000000;
@@ -57,7 +60,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    font-family: "Roboto Condensed", Arial, sans-serif;
+    font-family: "Roboto Condensed";
     margin: 0;
     min-height: 100vh;
     overflow-x: hidden;
@@ -378,6 +381,20 @@ body {
     font-size: 1.5rem;
     text-shadow: 0 0 8px var(--colorLogoShadowa);
     cursor: pointer;
+}
+
+.logo-brand {
+    font-family: "black ops one", sans-serif;
+    position: static;
+    display: block;
+    margin-right: 2rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--colorLogo);
+    -webkit-text-stroke: 0.02rem var(--colorBorde);
+    text-shadow: 0 0 10px var(--colorLogoShadowa), 0 0 20px var(--colorLogoShadowb);
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .top-navbar .navbar-collapse {
