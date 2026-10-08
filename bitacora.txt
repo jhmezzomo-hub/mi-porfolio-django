@@ -28,3 +28,8 @@
     el comentario y agregue las lineas de codifo pertinentes tanto en urls, como en views y en el html. Me faltaba
     poder agregar imagenes por lo que cree la columna en la base de datos y agregue que compruebe si existe al cargar
     los posts, en caso de que no, pone una imagen predeterminada.
+
+**Cuarta entrada:**
+    Al probarlo en clase, me di cuenta que al cambiar de archivo se perdia el cambio de color, por lo que lo consulte
+    con una IA que me dijo de usar un Script de JavaScript que guardara el estado (claro u obscuro) en la memoria
+    local del buscador. Le consulte al profe y me dijo que estaba bien porque era la unica forma de arreglarlo.
