@@ -1,0 +1,458 @@
+:root {
+  --colorVerde: #00ff00;
+  --colorFondo: #000000;
+  --colorSideBar1 : #4fff51;
+  --colorSideBar2 :  #99ff99c6;
+  --colorSideBarHover:  #52864d;
+  --colorH1 : #98ff8f;
+  --colorP :  #b4faad;
+  --colorH2 : #91ff87;
+  --colorH3 : #98ff8f;
+  --colorBorde : #60785e;
+  --colorShadowH1 : #98ff8f;
+  --colorShadowH2 : #15ff00;
+  --colorShadowH3 : #98ff8f;
+  --colorShadowP : #8eff83;
+  --colorFondoPC : rgba(20, 20, 20, 0.8);
+  --colorBordeYShadowPC : #98ff8f;
+  --colorBordeHoverPC : #b4faad;
+  --colorFondoLinka : #4fff51;
+  --colorFondoLinkb : #98ff8f;
+  --colorHoverLinka : #98ff8f;
+  --colorHoverLinkb : #b4faad;
+  --colorLogo : #98ff8f;
+  --colorLogoShadowa : #d8ffd5;
+  --colorLogoShadowb : #c6ffc1;
+  --fondo-contenido : rgba(255, 255, 255, 0.02);
+
+    --colorRojoTC: #ff0000;
+    --colorFondoTC: #eeeeee;
+    --colorSideBar1TC: #ff5151;
+    --colorSideBar2TC: #ff9999c6;
+    --colorSideBarHoverTC: #864d4d;
+    --colorH1TC: #ff8f98;
+    --colorPTC: #faadb4;
+    --colorH2TC: #ff8791;
+    --colorH3TC: #ff8f98;
+    --colorBordeTC: #785e60;
+    --colorShadowH1TC: #ff8f98;
+    --colorShadowH2TC: #ff0015;
+    --colorShadowH3TC: #ff8f98;
+    --colorShadowPTC: #ff838e;
+    --colorFondoPCTC: rgba(20, 20, 20, 0.8);
+    --colorBordeYShadowPCTC: #ff8f98;
+    --colorBordeHoverPCTC: #faadb4;
+    --colorFondoLinkaTC: #ff5151;
+    --colorFondoLinkbTC: #ff8f98;
+    --colorHoverLinkaTC: #ff8f98;
+    --colorHoverLinkbTC: #faadb4;
+    --colorLogoTC: #ff8f98;
+    --colorLogoShadowaTC: #ffd5d8;
+    --colorLogoShadowbTC: #ffc1c6;
+}
+
+body {
+    background-color: var(--colorFondo);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: "Roboto Condensed", Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    transition: background-color 0.3s ease;
+    color: var(--colorP);
+}
+
+.page-layout {
+    min-height: 100vh;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+    background-attachment: fixed;
+}
+
+.blog-shell {
+    padding: 2rem 1.5rem 4rem;
+}
+
+.blog-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.blog-hero {
+    max-width: 1200px;
+    margin: 0 auto 2rem auto;
+    background: rgba(20, 20, 20, 0.75);
+    border: 2px solid var(--colorBordeYShadowPC);
+    border-radius: 1.25rem;
+    box-shadow: 0 0 20px rgba(152, 255, 143, 0.3);
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 0.8rem;
+    color: var(--colorH1);
+    margin-bottom: 0.75rem;
+}
+
+.blog-hero h1 {
+    color: var(--colorH1);
+    text-shadow: 0 0 12px var(--colorShadowH1);
+    margin: 0 0 0.75rem;
+    font-size: clamp(2rem, 4vw, 4.2rem);
+    letter-spacing: 0.06em;
+    line-height: 1.05;
+}
+
+.blog-hero p {
+    margin: 0 auto;
+    max-width: 700px;
+    color: var(--colorP);
+    font-size: 1.05rem;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.post-card {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.post-card .project-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.post-card .project-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--colorFondoLinka);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.project-card {
+    background: var(--colorFondoPC);
+    border: 2px solid var(--colorBordeYShadowPC);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 0 15px var(--colorBordeYShadowPC);
+    position: relative;
+    z-index: 1;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px var(--colorBordeYShadowPC), 0 0 50px var(--colorBordeYShadowPC);
+    border-color: var(--colorBordeHoverPC);
+    z-index: 100;
+}
+
+.project-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.project-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.project-info h3 {
+    color: var(--colorH3);
+    -webkit-text-stroke: 0.015rem var(--colorBorde);
+    text-shadow: 0 0 5px var(--colorShadowH3);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-info p {
+    color: var(--colorP);
+    font-size: 0.95rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.post-detail {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(20, 20, 20, 0.82);
+    border: 2px solid var(--colorBordeYShadowPC);
+    border-radius: 1.25rem;
+    box-shadow: 0 0 20px rgba(152, 255, 143, 0.2);
+    padding: 2rem 2rem 1rem;
+    box-sizing: border-box;
+}
+
+.post-meta {
+    margin-bottom: 1.5rem;
+    color: var(--colorH1);
+}
+
+.post-meta a {
+    color: var(--colorH1);
+    text-decoration: none;
+}
+
+.post-body {
+    color: var(--colorP);
+    line-height: 1.9;
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+}
+
+.comment-section,
+.comment-list {
+    margin-top: 2rem;
+}
+
+.comment-section h3,
+.comment-list h3 {
+    color: var(--colorH2);
+    margin-bottom: 1rem;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 800px;
+    margin-top: 1rem;
+}
+
+.form-group {
+    margin-bottom: 0.25rem;
+}
+
+.form-group input,
+.form-group textarea {
+    display: block;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--colorBordeYShadowPC);
+    border-radius: 0.8rem;
+    color: var(--colorP);
+    padding: 0.9rem 1rem;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.back-link-wrap {
+    margin-bottom: 1.25rem;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 0.75rem;
+    padding: 0.75rem 1.2rem;
+    background: var(--colorFondoLinka);
+    color: #001100;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.2s ease, background 0.2s ease;
+    box-shadow: 0 0 12px rgba(152, 255, 143, 0.25);
+}
+
+.back-link:hover {
+    background: var(--colorHoverLinka);
+    transform: translateY(-1px);
+}
+
+.submit-btn {
+    align-self: flex-start;
+    border: none;
+    border-radius: 0.75rem;
+    padding: 0.8rem 1.3rem;
+    background: var(--colorFondoLinka);
+    color: #001100;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: var(--colorHoverLinka);
+}
+
+.comment-item {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(152, 255, 143, 0.4);
+    border-radius: 0.9rem;
+    padding: 1rem 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.comment-header {
+    color: var(--colorH1);
+    margin-bottom: 0.5rem;
+}
+
+.empty-state {
+    color: var(--colorP);
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.top-navbar {
+    position: sticky;
+    top: 0;
+    min-height: 4.5rem;
+    padding: 0.75rem 1.5rem;
+    background: rgba(0, 0, 0, 0.9);
+    border-bottom: 2px solid var(--colorVerde);
+    box-shadow: 0 0 15px var(--colorVerde);
+    z-index: 10;
+}
+
+.top-navbar .container-fluid {
+    position: relative;
+    min-height: 3rem;
+}
+
+.top-navbar .logo-brand {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    margin: 0;
+    color: var(--colorLogo);
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-shadow: 0 0 8px var(--colorLogoShadowa);
+    cursor: pointer;
+}
+
+.top-navbar .navbar-collapse {
+    justify-content: center;
+}
+
+.top-navbar .navbar-nav {
+    gap: 1.25rem;
+    align-items: center;
+}
+
+.top-navbar .nav-link {
+    color: var(--colorH1);
+    font-size: 1.15rem;
+    font-weight: bold;
+    text-shadow: 0 0 6px var(--colorShadowH1);
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.top-navbar .nav-link:hover,
+.top-navbar .nav-link.active {
+    color: var(--colorVerde);
+    text-shadow: 0 0 10px var(--colorVerde);
+}
+
+.top-navbar .navbar-toggler {
+    border-color: var(--colorVerde);
+}
+
+.top-navbar .navbar-toggler-icon {
+    filter: hue-rotate(80deg) brightness(1.5);
+}
+
+@media (max-width: 991px) {
+    .top-navbar .container-fluid {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .top-navbar .navbar-toggler {
+        order: 2;
+        margin-left: auto;
+    }
+
+    .top-navbar .logo-brand {
+        position: static;
+        order: 1;
+        transform: none;
+        margin: 0;
+    }
+
+    .top-navbar .navbar-collapse {
+        order: 3;
+        flex-basis: 100%;
+    }
+}
+
+.bordes-verdes {
+    background-image:
+        linear-gradient(90deg, var(--colorVerde), transparent 20%, transparent 80%, var(--colorVerde)),
+        linear-gradient(90deg, var(--colorVerde), transparent 20%, transparent 80%, var(--colorVerde)),
+        linear-gradient(0deg, var(--colorVerde), transparent 20%, transparent 80%, var(--colorVerde)),
+        linear-gradient(0deg, var(--colorVerde), transparent 20%, transparent 80%, var(--colorVerde));
+    background-size: 100% 8px, 100% 8px, 8px 100%, 8px 100%;
+    background-position: 0 0, 0 100%, 0 0, 100% 0;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+}
+
+.light-mode {
+    background-color: var(--colorFondoTC);
+    --colorVerde: var(--colorRojoTC);
+    --colorFondo: var(--colorFondoTC);
+    --colorSideBar1: var(--colorSideBar1TC);
+    --colorSideBar2: var(--colorSideBar2TC);
+    --colorSideBarHover: var(--colorSideBarHoverTC);
+    --colorH1: var(--colorH1TC);
+    --colorP: var(--colorPTC);
+    --colorH2: var(--colorH2TC);
+    --colorH3: var(--colorH3TC);
+    --colorBorde: var(--colorBordeTC);
+    --colorShadowH1: var(--colorShadowH1TC);
+    --colorShadowH2: var(--colorShadowH2TC);
+    --colorShadowH3: var(--colorShadowH3TC);
+    --colorShadowP: var(--colorShadowPTC);
+    --colorFondoPC: var(--colorFondoPCTC);
+    --colorBordeYShadowPC: var(--colorBordeYShadowPCTC);
+    --colorBordeHoverPC: var(--colorBordeHoverPCTC);
+    --colorFondoLinka: var(--colorFondoLinkaTC);
+    --colorFondoLinkb: var(--colorFondoLinkbTC);
+    --colorHoverLinka: var(--colorHoverLinkaTC);
+    --colorHoverLinkb: var(--colorHoverLinkbTC);
+    --colorLogo: var(--colorLogoTC);
+    --colorLogoShadowa: var(--colorLogoShadowaTC);
+    --colorLogoShadowb: var(--colorLogoShadowbTC);
+}

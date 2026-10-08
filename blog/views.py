@@ -1,14 +1,13 @@
-from django.http import HttpResponseRedirect
-from django.shortcuts import render
+from django.shortcuts import redirect, render
+from blog.forms import CommentForm
 from blog.models import Post, Comment
-from blog.templates.blog.forms import CommentForm
 
 # Create your views here.
 def blog_index(request):
-    post = Post.objects.all().order_by("-created_on")
+    posts = Post.objects.all().order_by("-created_on")
 
     context = {
-        "posts": post,
+        "posts": posts,
     }
     return render(request, "blog/index.html", context)
 
@@ -24,23 +23,24 @@ def blog_category(request, category):
 
 def blog_detail(request, pk):
     post = Post.objects.get(pk=pk)
-    form = CommentForm()
+    comments = Comment.objects.filter(post=post).order_by("-created_on")
+
     if request.method == "POST":
         form = CommentForm(request.POST)
         if form.is_valid():
-            comment = Comment(
+            Comment.objects.create(
                 author=form.cleaned_data["author"],
                 body=form.cleaned_data["body"],
                 post=post,
             )
-            comment.save()
-            return HttpResponseRedirect(request.path_info)
-        
-    comments = Comment.objects.filter(post=post)
+            return redirect("blog_detail", pk=post.pk)
+    else:
+        form = CommentForm()
+
     context = {
         "post": post,
         "comments": comments,
-        "form": CommentForm(),
+        "form": form,
     }
 
     return render(request, "blog/detail.html", context)
